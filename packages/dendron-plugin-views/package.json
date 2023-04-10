@@ -174,7 +174,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.176",
-    "@types/mermaid": "^8.2.9",
+    "@types/mermaid": "~9.1.0",
     "cross-env": "^7.0.3",
     "rimraf": "^3.0.2"
   }

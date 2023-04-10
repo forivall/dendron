@@ -6,6 +6,12 @@ interface MermaidScriptProps {
   noteBody: string;
 }
 
+declare global {
+  interface Window {
+    _mermaid?: import("mermaid").Mermaid;
+  }
+}
+
 export const MermaidScript: React.FC<MermaidScriptProps> = (props) => {
   const [loadMermaid, setLoadMermaid] = React.useState(false);
   const { noteBody } = props;
@@ -30,11 +36,11 @@ export const MermaidScript: React.FC<MermaidScriptProps> = (props) => {
         id="initmermaid"
         src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
         onLoad={() => {
-          const mermaid = (window as any).mermaid;
+          const mermaid = window.mermaid!;
           // save for debugging
           // when trying to access mermaid in DOM, <div id="mermaid"></div> gets returned
           // we disambiguate by saving a copy of mermaid
-          (window as any)._mermaid = mermaid;
+          window._mermaid = mermaid;
           mermaid.initialize({
             startOnLoad: false,
           });
