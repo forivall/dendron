@@ -34,6 +34,7 @@ import remarkParse from "remark-parse";
 import remark2rehype from "remark-rehype";
 // import rehypeWrap from "rehype-wrap";
 import { wrap } from "./rehype/wrap";
+import { dataLine } from "./rehype/dataLine";
 import { Processor } from "unified";
 import { hierarchies } from "./remark";
 import { backlinks } from "./remark/backlinks";
@@ -435,6 +436,10 @@ export class MDUtilsV5 {
       .use(wrap, { selector: "table", wrapper: "div.table-responsive" })
       .use(raw)
       .use(slug);
+
+    if (opts.flavor === ProcFlavor.PREVIEW) {
+      pRehype.use(dataLine);
+    }
 
     // apply plugins enabled by config
     const shouldApplyPublishRules =
