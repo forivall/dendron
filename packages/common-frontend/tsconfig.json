@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "strict": true,
     "declaration": true,
+    "declarationMap": true,
     "jsx": "preserve",
     // --- checks
     "noUnusedLocals": true,
@@ -16,6 +17,7 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
     // --- language features
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true

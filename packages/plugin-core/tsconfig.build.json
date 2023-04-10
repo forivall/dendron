@@ -4,6 +4,7 @@
     "outDir": "out",
     "rootDirs": ["src", "scripts"],
     "declaration": false,
+    "declarationMap": false,
     "skipLibCheck": true,
     "strictNullChecks": true
   },

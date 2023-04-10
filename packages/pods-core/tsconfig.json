@@ -15,6 +15,7 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
     // --- language features
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true

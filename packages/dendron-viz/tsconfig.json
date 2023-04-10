@@ -10,12 +10,14 @@
     "esModuleInterop": true,
     "strict": true,
     "declaration": true,
+    "declarationMap": true,
     // --- checks
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
     // --- language features
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

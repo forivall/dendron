@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "strict": true,
     "noImplicitAny": true,
+    "skipLibCheck": true,
     "paths": {
       //"@dendronhq/*": ["packages/*/src"],
       "@dendronhq/api-server": [
